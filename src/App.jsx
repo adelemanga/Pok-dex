@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import PokemonCard from './src/PokemonCard'
 
+
 const pokemonList = [
   {
     name: "bulbasaur",
@@ -14,6 +15,8 @@ const pokemonList = [
     name: "mew",
   },
 ];
+
+
 
 
 function App() {
