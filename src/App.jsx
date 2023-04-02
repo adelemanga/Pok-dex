@@ -5,22 +5,64 @@ import './App.css'
 import PokemonCard from './src/PokemonCard'
 
 
+
 const pokemonList = [
   {
-    name: "bulbasaur",
-    imgSrc:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-  },
-  {
-    name: "mew",
-  },
-];
-
+      name: "bulbasaur",
+      imgSrc:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+    },
+    {
+      name: "charmander",
+      imgSrc:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+    },
+    {
+      name: "squirtle",
+      imgSrc:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+    },
+    {
+      name: "pikachu",
+      imgSrc:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+    },
+    {
+      name: "mew",
+    },
+  ];
 
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
+ /* const [pokemonIndex, setPokemonIndex] = useState({name:"bulbasaur"})
+  const mouseClick = () => {
+    setPokemonIndex({name:"charmander" || "squirtle"})
+  }
+  return (<div>
+    <p>{pokemonIndex.name}</p>
+    <button onClick={handleClick}>Suivant</button>
+  </div>);*/
+  
+    
+  const btn = document.createElement("button")
+
+  btn.textContent = "Suivant"
+  
+  const handleClick = (event) => {
+    console.log(event.target)
+  }
+  
+  btn.addEventListener("click", handleClick)
+  
+  document.body.appendChild(btn)
+
+
+
+
+
+/*const [count, setCount] = useState(0)
 
   return (
     <div className="App">
@@ -50,7 +92,7 @@ function App() {
        />
 
     </div>
-  )
+  )*/
 }
 
 export default App

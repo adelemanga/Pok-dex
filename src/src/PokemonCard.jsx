@@ -23,6 +23,9 @@ PokemonCard.PropTypes = {
 
 
 
+  
+  
+
 export default PokemonCard
 
  
