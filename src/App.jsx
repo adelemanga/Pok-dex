@@ -5,21 +5,77 @@ import './App.css'
 import PokemonCard from './src/PokemonCard'
 
 
+
+
 const pokemonList = [
   {
-    name: "bulbasaur",
-    imgSrc:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-  },
-  {
-    name: "mew",
-  },
-];
-
+      name: "bulbasaur",
+      imgSrc:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+    },
+    {
+      name: "charmander",
+      imgSrc:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+    },
+    {
+      name: "squirtle",
+      imgSrc:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+    },
+    {
+      name: "pikachu",
+      imgSrc:
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+    },
+    {
+      name: "mew",
+    },
+  ];
 
 
 
 function App() {
+  const pokemonList = [
+    {
+        name: "bulbasaur",
+        imgSrc:
+          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+      },
+      {
+        name: "charmander",
+        imgSrc:
+          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+      },
+      {
+        name: "squirtle",
+        imgSrc:
+          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+      },
+      {
+        name: "pikachu",
+        imgSrc:
+          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+      },
+      {
+        name: "mew",
+      },
+    ];
+
+    const [pokemonIndex, setPokemonIndex] = useState({pokemonList} );
+    const handleClick = (pokemonList) => {
+      console.log(pokemonList.target)
+    }
+
+    return <button onClick={handleClick}>Suivant</button>;
+
+
+
+
+
+
+
+
   const [count, setCount] = useState(0)
 
   return (
@@ -52,5 +108,26 @@ function App() {
     </div>
   )
 }
+
+
+  
+
+
+
+
+    // const [pokemonIndex, setpokemonIndex] = useState({pokemonList});
+    // const handleClick = () => {
+    //   setpokemonIndex (pokemonList + 1)
+    // }
+
+    // return (<div>
+    //            <p>{pokemonIndex.pokemonList}</p>
+    //            <button onClick={handleClick}>Suivant</button>
+    //        </div>);
+
+    // return(<div>
+    //        <p>{setpokemonIndex.pokemonList}</p>
+    //        <button onClick={handleClick}>Précédent</button>
+    //        </div>)
 
 export default App
