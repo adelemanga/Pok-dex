@@ -36,78 +36,40 @@ const pokemonList = [
 
 
 function App() {
-  const pokemonList = [
-    {
-        name: "bulbasaur",
-        imgSrc:
-          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-      },
-      {
-        name: "charmander",
-        imgSrc:
-          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
-      },
-      {
-        name: "squirtle",
-        imgSrc:
-          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
-      },
-      {
-        name: "pikachu",
-        imgSrc:
-          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
-      },
-      {
-        name: "mew",
-      },
-    ];
-
-    const [pokemonIndex, setPokemonIndex] = useState({pokemonList} );
-    const handleClick = (pokemonList) => {
-      console.log(pokemonList.target)
+  
+    const [pokemonIndex, setPokemonIndex] = useState(0);
+    const handlePrecedingClick = () => {
+      setPokemonIndex(pokemonIndex - 1)
+    }
+    
+    const hadleNextClick = () => {
+      setPokemonIndex( pokemonIndex + 1)
     }
 
-    return <button onClick={handleClick}>Suivant</button>;
+    return <div>
+      <PokemonCard pokemon = {pokemonList[pokemonIndex]}/>
+      {
+        pokemonIndex > 0 && <button onClick = {handlePrecedingClick} >Précédent</button>
+      }
 
-
-
-
-
-
-
-
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      {pokemonIndex< pokemonList.length -1 && <button onClick={hadleNextClick}> Suivant</button>}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    }
+      // on doit diminuer pokemonIndex de 1 (le minimum est 0);
+    
+    
 
-       <PokemonCard
-       pokemon={pokemonList[0]}
-       />
-
-    </div>
-  )
-}
+      // on doit augmenter pokemonIndex de 1 (le maximum est de pokemonList.length)
+    
+    /*return (
+      <>
+        <button onClick={handlePrevClick}>Précédent</button>
+        <button onClick={handleNextClick}>Suivant</button>
+        <PokemonCard pokemon={pokemonList[pokemonIndex]}></PokemonCard>
+      </>
+    );
+    
+}*/
 
 
   
