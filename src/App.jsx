@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import PokemonCard from './src/PokemonCard'
+import Navbar from './src/Navbar'
 
 
 
@@ -35,8 +36,17 @@ const pokemonList = [
 
 
 function App() {
+ const [pokemonIndex, setPokemonIndex] = useState(0)
+ return (
+  <div>
+    <Navbar pokemonIndex={pokemonIndex} setPokemonIndex={setPokemonIndex} pokemonList={pokemonList}/>
+    <PokemonCard pokemon = { pokemonList[pokemonIndex]}/>
+  </div>
+ )
 
- /* const [pokemonIndex, setPokemonIndex] = useState({name:"bulbasaur"})
+
+
+  /*const [pokemonIndex, setPokemonIndex] = useState({name:"bulbasaur"})
   const mouseClick = () => {
     setPokemonIndex({name:"charmander" || "squirtle"})
   }
@@ -46,7 +56,7 @@ function App() {
   </div>);*/
   
     
-  const btn = document.createElement("button")
+  /*const btn = document.createElement("button")
 
   btn.textContent = "Suivant"
   
@@ -56,7 +66,7 @@ function App() {
   
   btn.addEventListener("click", handleClick)
   
-  document.body.appendChild(btn)
+  document.body.appendChild(btn)*/
 
 
 

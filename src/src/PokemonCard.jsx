@@ -2,8 +2,9 @@ import App from "../App";
 import PropTypes from "prop-types";
 
 
+
 function PokemonCard(props) {
-  console.log(pokemon)
+  console.log(props)
   return (
     <>
       <div>{props.pokemon.name}</div>
