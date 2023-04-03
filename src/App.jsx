@@ -36,6 +36,8 @@ const pokemonList = [
 
 function App() {
 
+
+  
  /* const [pokemonIndex, setPokemonIndex] = useState({name:"bulbasaur"})
   const mouseClick = () => {
     setPokemonIndex({name:"charmander" || "squirtle"})
