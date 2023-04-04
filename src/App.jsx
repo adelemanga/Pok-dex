@@ -3,40 +3,25 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import PokemonCard from './src/PokemonCard'
-
-
-
-const pokemonList = [
-  {
-      name: "bulbasaur",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-    },
-    {
-      name: "charmander",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
-    },
-    {
-      name: "squirtle",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
-    },
-    {
-      name: "pikachu",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
-    },
-    {
-      name: "mew",
-    },
-  ];
+import { pokemonList } from './utils'
 
 
 
 function App() {
 
+  const [pokemonIndex, setPokemonIndex] = useState(0)
+  return (
+   <div>
+     <Navbar pokemonIndex={pokemonIndex} setPokemonIndex={setPokemonIndex} pokemonList={pokemonList}/>
+     <PokemonCard pokemon = { pokemonList[pokemonIndex]}/>
+   </div>
+  )
 
+  useEffect(
+    () =>{
+      console.log("hello pokemon trainer :")
+    }
+  )
   
  /* const [pokemonIndex, setPokemonIndex] = useState({name:"bulbasaur"})
   const mouseClick = () => {
@@ -48,7 +33,7 @@ function App() {
   </div>);*/
   
     
-  const btn = document.createElement("button")
+  /*const btn = document.createElement("button")
 
   btn.textContent = "Suivant"
   
@@ -58,7 +43,7 @@ function App() {
   
   btn.addEventListener("click", handleClick)
   
-  document.body.appendChild(btn)
+  document.body.appendChild(btn)*/
 
 
 

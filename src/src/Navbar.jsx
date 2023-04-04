@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function NavBar ({pokemonList, handleClick, pokemonList}){
+function NavBar ({pokemonList, handleClick}){
     const pokemonButton = pokemonList.map(pokemon => ( <button onClick={pokemon.name}>{pokemon.name}</button>))
     console.log(pokemonButton)
 
