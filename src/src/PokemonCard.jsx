@@ -1,18 +1,25 @@
 import App from "../App";
 
 export default function PokemonCard(props) {
-  console.log(props.pokemon)
-  return (
-    <>
-      <div>{props.pokemon.name}</div>
-
-      {props.pokemon.imgSrc ? <img src={props.pokemon.imgSrc}></img> : <p>???</p>}
-
-      
-    </>
-  );
+  console.log(props)
+    return (
+     <> <figure>
+        <img src={props.pokemon.imgSrc} />
+     </figure>
   
-}
+      <figcaption>{props.pokemon.name}</figcaption> 
+      </>
+     )
+  }
+ 
+ 
+
+
+   
+
+
+
+
 
 // export default function (){
 //   const pokemon = pokemonList[0];
