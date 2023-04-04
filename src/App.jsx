@@ -6,7 +6,13 @@ import PokemonCard from './src/PokemonCard'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
+return(
+  <div>
+    <PokemonCard/>
+  </div>
+)
+  /*const [count, setCount] = useState(0)
 
   return (
     <div className="App">
@@ -31,13 +37,9 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
 
-       <PokemonCard
-       img= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt=""
-
-       figcation="bulbasaur"
-       />
+       
     </div>
-  )
+  )*/
 }
 
 export default App
