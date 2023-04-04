@@ -1,7 +1,18 @@
 import App from "../App";
 
 export default function PokemonCard() {
-  const pokemon = pokemonList[0];
+
+  const pokemon = pokemonList[1];
+  console.log(pokemon);
+  return(
+    <>
+    <div>{pokemon.name}</div>
+    {pokemon.imgSrc ? <img src={pokemon.imgSrc}></img> : <p>???</p>}
+    </>
+  )
+
+
+  /*const pokemon = pokemonList[0];
   console.log(pokemon)
   return (
     <>
@@ -9,7 +20,9 @@ export default function PokemonCard() {
 
       {pokemon.imgSrc ? <img src={pokemon.imgSrc}></img> : <p>???</p>}
     </>
-  );
+  );*/
+  
+
   
 
 }
